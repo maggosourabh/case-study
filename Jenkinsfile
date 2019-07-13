@@ -28,5 +28,10 @@ pipeline {
 	    sh 'mvn package verify install'
 	    }
 	}
+	stage('Deploy') {
+	steps {
+	    echo 'Deploying package on tomcat...'
+	    }
+	}
   }
 }
