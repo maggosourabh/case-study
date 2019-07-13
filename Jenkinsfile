@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Initialize') {
 	steps {
-	    echo 'Validating source code...'
+	    echo 'validating source code...'
 	    sh 'mvn validate'
 	    }
 	}
