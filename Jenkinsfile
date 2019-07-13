@@ -6,25 +6,25 @@ pipeline {
     stages {
         stage('Initialize') {
 	steps {
-	    echo 'Validating source code..'
+	    echo 'Validating source code...'
 	    sh 'mvn validate'
 	    }
 	}
 	stage('Build') {
 	steps {
-	    echo 'Building application package..'
+	    echo 'Building application package...'
 	    sh 'mvn clean compile'
             }
         }
         stage('Test') {
 	steps {
-	    echo 'Starting Unit Test phase..'
+	    echo 'Starting Unit Test phase...'
 	    sh 'mvn test'
 	    }
 	}
 	stage('Packaging') {
 	steps {
-	    echo 'Starting packaging phase..'
+	    echo 'Starting packaging phase...'
 	    sh 'mvn package verify install'
 	    }
 	}
